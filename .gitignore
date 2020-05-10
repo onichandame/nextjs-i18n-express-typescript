@@ -1,4 +1,4 @@
-# Logs
+jest --passWithNoTests# Logs
 logs
 *.log
 npm-debug.log*

@@ -1,0 +1,71 @@
+{
+  "name": "nextjs-i18n-express-typescript",
+  "version": "0.0.0",
+  "author": "your name",
+  "main": "dist/server/index.js",
+  "private": false,
+  "scripts": {
+    "dev": "nodemon",
+    "build": "yarn build:clean && yarn build:server && next build",
+    "build:server": "tsc --project tsconfig.server.json",
+    "build:clean": "rimraf dist",
+    "start": "cross-env NODE_ENV=production node dist/server",
+    "test": "jest --passWithNoTests",
+    "lint": "eslint --ext ts --ext tsx src"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.9.11",
+    "@material-ui/icons": "^4.9.1",
+    "apollo-client-ssr": "^0.0.2",
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1",
+    "graphql": "^15.0.0",
+    "graphql-tag": "^2.10.3",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "9.3.5",
+    "next-i18next": "^4.3.0",
+    "next-images": "^1.3.1",
+    "nodemon": "^2.0.3",
+    "randomstring": "^1.1.5",
+    "react": "^16.13.1",
+    "react-dom": "16.13.1",
+    "subscriptions-transport-ws": "^0.9.16",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@types/express": "^4.17.6",
+    "@types/jest": "^25.2.1",
+    "@types/randomstring": "^1.1.6",
+    "@types/react": "^16.9.34",
+    "@typescript-eslint/eslint-plugin": "^2.28.0",
+    "@typescript-eslint/parser": "^2.28.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.7",
+    "babel-preset-react-app": "^9.1.1",
+    "core-js": "3.6.5",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
+    "i": "^0.3.6",
+    "jest": "^25.4.0",
+    "npm": "^6.14.4",
+    "react-docgen-typescript-loader": "^3.7.1",
+    "rimraf": "^3.0.2",
+    "ts-loader": "^7.0.1",
+    "ts-node": "^8.8.2",
+    "typescript": "^3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "pre-push": "yarn test && yarn build"
+    }
+  }
+}
