@@ -1,23 +1,16 @@
 # Template NextJS Project
 
-a template next.js project with i18n, express server and ts configured
+a template next.js project
 
-# Scripts
+# Author
 
-start dev server:
+[onichandame](https://github.com/onichandame)
 
-```bash
-yarn dev
-```
+# Features
 
-build to /dist:
-
-```bash
-yarn build
-```
-
-start built server
-
-```bash
-yarn start
-```
+- Next.jss
+- Typescript
+- i18n
+- Express.js
+- Material-UI
+- system theme

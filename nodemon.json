@@ -1,0 +1,6 @@
+{
+  "watch": ["src/server", "public/static/locales"],
+  "ignore": ["node_modules", "*.test.ts"],
+  "ext": "ts tsx",
+  "exec": "ts-node --project tsconfig.server.json src/server"
+}
