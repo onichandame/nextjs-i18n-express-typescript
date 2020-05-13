@@ -1,6 +1,6 @@
 import { ComponentType } from "react"
 import NextI18Next from "next-i18next"
-import { NextComponentType, NextPageContext } from "next"
+import { GetServerSideProps } from "next"
 
 export const nextI18next = new NextI18Next({
   defaultLanguage: "en",
@@ -24,13 +24,17 @@ export type PageInitialProps = {
   namespacesRequired: string[]
 }
 
-export type TranslatedPageComponent<P = {}> = NextComponentType<
-  NextPageContext,
-  PageInitialProps,
-  P & PageInitialProps
->
+//export type TranslatedPageComponent<P = {}> = NextComponentType<
+//  NextPageContext,
+//  PageInitialProps,
+//  P & PageInitialProps
+//>
+//
+//export type TPC<P = {}> = TranslatedPageComponent<P>
 
-export type TPC<P = {}> = TranslatedPageComponent<P>
+export type TranslatedGetServerSideProps = GetServerSideProps<PageInitialProps>
+
+export type TSSP = TranslatedGetServerSideProps
 
 export const setNamespaces = (namespace: string[]): string[] =>
   ["common", "_error"].concat(namespace)
