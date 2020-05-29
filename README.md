@@ -8,13 +8,13 @@ a template next.js project
 
 # Features
 
-- Next.jss
+- Next.js
 - Typescript
 - i18n
 - Express.js
 - Material-UI
 - system theme
 
-# Known Drakbacks
+# Known Issues
 
 1. warning of using getInitialProps instead of getServerSideProps. Due to an import from next-18next
