@@ -29,6 +29,7 @@
     "randomstring": "^1.1.5",
     "react": "^16.13.1",
     "react-dom": "16.13.1",
+    "react-sysmode": "^0.0.0",
     "subscriptions-transport-ws": "^0.9.16",
     "winston": "^3.2.1"
   },
