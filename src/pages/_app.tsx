@@ -4,6 +4,7 @@ import NextHead from "next/head"
 import { CssBaseline } from "@material-ui/core"
 
 import { appWithTranslation, useTranslation } from "../i18n"
+import { Layout } from "../components"
 
 const Head: FC = () => {
   const { t } = useTranslation()
@@ -37,7 +38,9 @@ class MyApp extends App {
       <Fragment>
         <Head />
         <CssBaseline />
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </Fragment>
     )
   }
