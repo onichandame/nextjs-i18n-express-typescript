@@ -1,6 +1,6 @@
 # Template NextJS Project
 
-a template next.js project
+a template next.js project. Suitable for serverful applications.
 
 # Author
 
@@ -14,6 +14,7 @@ a template next.js project
 - Express.js
 - Material-UI
 - system theme
+- GraphQL
 
 # Known Issues
 
