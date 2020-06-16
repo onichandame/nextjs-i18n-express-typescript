@@ -9,7 +9,7 @@ import {
   FormControlLabel,
   Menu,
   MenuItem,
-  Toolbar
+  Toolbar,
 } from "@material-ui/core"
 import { makeStyles, createStyles } from "@material-ui/core/styles"
 import { AccountCircle, Menu as MenuIcon } from "@material-ui/icons"
@@ -19,14 +19,14 @@ import { i18n, useTranslation, withTranslation } from "../../i18n"
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      flexGrow: 1
+      flexGrow: 1,
     },
     menuButton: {
-      marginRight: theme.spacing(2)
+      marginRight: theme.spacing(2),
     },
     title: {
-      flexGrow: 1
-    }
+      flexGrow: 1,
+    },
   })
 )
 
@@ -112,12 +112,12 @@ export const Appbar = withTranslation("common")(() => {
                 anchorEl={anchorEl}
                 anchorOrigin={{
                   vertical: "top",
-                  horizontal: "right"
+                  horizontal: "right",
                 }}
                 keepMounted
                 transformOrigin={{
                   vertical: "top",
-                  horizontal: "right"
+                  horizontal: "right",
                 }}
                 open={open}
                 onClose={handleClose}

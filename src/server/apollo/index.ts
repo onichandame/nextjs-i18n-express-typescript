@@ -8,8 +8,8 @@ export const apollo = async (app: Express) => {
   const server = new ApolloServer({
     schema: await buildSchema({
       validate: false,
-      resolvers: [TestResolver]
-    })
+      resolvers: [TestResolver],
+    }),
   })
   server.applyMiddleware({ app, path: "/__graphql", cors: false })
   return server

@@ -3,7 +3,7 @@ import { NextPage } from "next"
 
 export const nextI18next = new NextI18Next({
   defaultLanguage: "en",
-  otherLanguages: ["cn"]
+  otherLanguages: ["cn"],
 })
 
 export const {
@@ -12,7 +12,7 @@ export const {
   useTranslation,
   Link,
   i18n,
-  Trans
+  Trans,
 } = nextI18next
 
 export type PageInitialProps = {

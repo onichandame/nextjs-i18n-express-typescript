@@ -3,7 +3,7 @@ import Document, { DocumentContext } from "next/document"
 import { ServerStyleSheets } from "@material-ui/core/styles"
 import {
   DocumentInitialProps,
-  RenderPageResult
+  RenderPageResult,
 } from "next/dist/next-server/lib/utils"
 
 export default class MyDocument extends Document {
@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
     ctx.renderPage = (): RenderPageResult | Promise<RenderPageResult> =>
       originalRenderPage({
         enhanceApp: App => (props): ReturnType<ServerStyleSheets["collect"]> =>
-          sheets.collect(<App {...props} />)
+          sheets.collect(<App {...props} />),
       })
 
     const initialProps = await Document.getInitialProps(ctx)
@@ -27,7 +27,7 @@ export default class MyDocument extends Document {
           {initialProps.styles}
           {sheets.getStyleElement()}
         </>
-      )
+      ),
     }
   }
 }

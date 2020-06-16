@@ -34,12 +34,12 @@ const Home: TPC = () => {
 
 Home.getInitialProps = () => {
   return {
-    namespacesRequired: setNamespaces([])
+    namespacesRequired: setNamespaces([]),
   }
 }
 
 export default withApollo(Home, {
   url: "/__graphql",
   localPort: port,
-  subscription: false
+  subscription: false,
 })
