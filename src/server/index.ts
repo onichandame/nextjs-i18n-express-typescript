@@ -4,7 +4,7 @@ import bodyParser from "body-parser"
 import "reflect-metadata" //before type-graphql
 
 import nextI18next from "../i18n"
-import app from "./app"
+import { app } from "./app"
 import { apollo } from "./apollo"
 import { port } from "../common"
 
