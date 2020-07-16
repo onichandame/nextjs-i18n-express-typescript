@@ -12,6 +12,7 @@ export class Test {
 export class TestResolver {
   @Query(() => Test)
   async get() {
-    return { string: "hello", date: new Date() }
+    const date = new Date()
+    return { string: date.getSeconds() % 2 ? "hello" : "bro", date: new Date() }
   }
 }

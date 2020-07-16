@@ -11,6 +11,6 @@ export const apollo = async (app: Express) => {
       resolvers: [TestResolver],
     }),
   })
-  server.applyMiddleware({ app, path: "/__graphql", cors: false })
+  server.applyMiddleware({ app, path: "/graphql", cors: false })
   return server
 }

@@ -1,12 +1,11 @@
 import React from "react"
 import gql from "graphql-tag"
-import { withApollo } from "apollo-client-ssr"
-import { useQuery } from "@apollo/react-hooks"
+import { withApollo, useQuery } from "apollo-client-ssr"
 
 import { useTranslation, setNamespaces, TPC } from "../i18n"
 import { port } from "../common"
 
-const Query = gql`
+const QUERY = gql`
   query test {
     get {
       date
@@ -19,15 +18,17 @@ const Home: TPC = () => {
   const { t } = useTranslation()
   const { error, data, loading } = useQuery<{
     get: { date: Date; string: string }
-  }>(Query)
+  }>(QUERY, { pollInterval: 1000 })
   return (
     <div>
       <div>{t("description")}</div>
       {error
         ? error.message
-        : data && !loading
+        : loading
+        ? "loading"
+        : data
         ? `${data.get.string} ${new Date(data.get.date).toUTCString()}`
-        : "loading"}
+        : "error"}
     </div>
   )
 }
@@ -39,7 +40,7 @@ Home.getInitialProps = () => {
 }
 
 export default withApollo(Home, {
-  url: "/__graphql",
+  url: "/graphql",
   localPort: port,
   subscription: false,
 })
