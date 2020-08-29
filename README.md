@@ -1,3 +1,5 @@
+**Warning** This template depends on the custom server feature of Next.js, which is discouraged. Hence this repo is not actively maintained. Check [my another repo](https://github.com/onichandame/gatsby-template) for Gatsby template.
+
 # Template NextJS Project
 
 a template next.js project. Suitable for serverful applications.
