@@ -1,6 +1,2 @@
-const withImages = require('next-images')
-
-module.exports = withImages({
-  distDir: 'dist/.next',
-  useFileSystemPublicRoutes: true
-})
+const withMDX = require("@next/mdx")()
+module.exports = withMDX({ pageExtensions: ["ts", "tsx", "mdx", "md"] })

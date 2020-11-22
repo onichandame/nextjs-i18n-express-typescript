@@ -1,67 +1,22 @@
 {
-  "name": "nextjs-i18n-express-typescript",
-  "version": "0.0.0",
-  "author": "your name",
-  "main": "dist/server/index.js",
-  "private": false,
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "nodemon",
-    "build": "yarn build:clean && yarn build:server && next build",
-    "build:server": "tsc --project tsconfig.server.json",
-    "build:clean": "rimraf dist",
-    "start": "cross-env NODE_ENV=production node dist/server",
-    "test": "jest --passWithNoTests",
-    "format": "prettier -c \"src/**/*.{ts,tsx,js,jsx,json,md}\" --write"
+    "dev": "next dev -p $PORT",
+    "build": "next build && next export -o dist",
+    "start": "next start"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "apollo-client-ssr": "^0.0.11",
-    "apollo-server-express": "^2.15.1",
-    "cross-env": "^7.0.2",
-    "express": "^4.17.1",
-    "graphql": "^15.3.0",
-    "graphql-tag": "^2.10.4",
-    "isomorphic-unfetch": "^3.0.0",
-    "next": "9.4.4",
-    "next-i18next": "^4.5.0",
-    "next-images": "^1.3.1",
-    "nodemon": "^2.0.4",
-    "randomstring": "^1.1.5",
-    "react": "^16.13.1",
-    "react-dom": "16.13.1",
-    "react-sysmode": "^0.0.1",
-    "reflect-metadata": "^0.1.13",
-    "subscriptions-transport-ws": "^0.9.17",
-    "type-graphql": "^1.0.0-rc.3",
-    "winston": "^3.3.3"
+    "@mdx-js/loader": "^1.6.21",
+    "@next/mdx": "^10.0.2",
+    "next": "10.0.2",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "@types/express": "^4.17.7",
-    "@types/jest": "^26.0.4",
-    "@types/randomstring": "^1.1.6",
-    "@types/react": "^16.9.43",
-    "awesome-typescript-loader": "^5.2.1",
-    "babel-loader": "^8.0.6",
-    "babel-plugin-styled-components": "^1.10.7",
-    "babel-preset-react-app": "^9.1.1",
-    "core-js": "3.6.5",
-    "husky": "^4.2.5",
-    "i": "^0.3.6",
-    "jest": "^26.1.0",
-    "npm": "^6.14.6",
-    "prettier": "^2.0.5",
-    "react-docgen-typescript-loader": "^3.7.1",
-    "rimraf": "^3.0.2",
-    "ts-loader": "^8.0.1",
-    "ts-node": "^8.10.2",
-    "typescript": "^3.9.6"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn format",
-      "pre-push": "yarn test && yarn build"
-    }
+    "@types/node": "^14.14.9",
+    "@types/react": "^17.0.0",
+    "typescript": "^4.1.2"
   }
 }
